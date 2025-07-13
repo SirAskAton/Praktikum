@@ -1,4 +1,4 @@
-package com.example.praktikum
+package com.example.Praktikum
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
@@ -25,7 +25,6 @@ fun MyApp(navController: NavHostController) {
     val currentRoute = currentBackStack?.destination?.route
     val showBottomBar = listOf(Screen.Home.route, Screen.Profile.route).contains(currentRoute)
 
-    // Tentukan start destination berdasarkan login
     val startDestination = if (AuthState.registeredUser != null) {
         Screen.Home.route
     } else {
@@ -47,7 +46,7 @@ fun MyApp(navController: NavHostController) {
             SetupNavGraph(
                 navController = navController,
                 modifier = Modifier.padding(contentPadding),
-                startDestination = startDestination // 🔥 ini penting
+                startDestination = startDestination
             )
         }
     }

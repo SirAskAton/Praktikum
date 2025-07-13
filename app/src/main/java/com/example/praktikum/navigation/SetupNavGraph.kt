@@ -2,17 +2,17 @@ package com.example.Praktikum.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.Praktikum.screens.HomeScreen
+import com.example.Praktikum.screens.LoginScreen
 import com.example.Praktikum.screens.ProfileScreen
 import com.example.Praktikum.screens.ResultScreen
-import com.example.Praktikum.screens.LoginScreen
 import com.example.Praktikum.screens.RegisterScreen
+import com.example.Praktikum.screens.NotesScreen
 
 @Composable
 fun SetupNavGraph(navController: NavHostController,
@@ -27,6 +27,10 @@ fun SetupNavGraph(navController: NavHostController,
         composable(Screen.Home.route) {
             HomeScreen(navController)
         }
+        composable(Screen.Notes.route) {
+            NotesScreen()
+        }
+
 
 
         composable(

@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.Praktikum.ui.theme.PraktikumTheme
-import com.example.praktikum.MyApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +21,7 @@ class MainActivity : ComponentActivity() {
             PraktikumTheme {
                 Surface (
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background // atau Color.White
+                    color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
                     MyApp(navController)
